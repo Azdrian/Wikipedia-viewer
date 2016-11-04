@@ -1,1 +1,35 @@
+<!doctype html>
+<html>
 
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wiki Viewer</title>
+	<link rel="stylesheet" href="css/style.css"> </head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<h1 class="heading">Wikipedia Viewer</h1> </header>
+		<!-- end of header -->
+		<main class="wiki-content">
+			<div class="search-area">
+				<form action="">
+					<input class="search" type="text" placeholder="Search for an article.." type="submit" name="search-box" id="search-box" autofocus required>
+					<input id="search-button" type="button" value="Search"> </form> <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" id="random-wiki">random wiki article</a> </div>
+			<div class="search-results"> </div>
+			<!-- end of #search-results -->
+		</main>
+		<!-- end of main -->
+		<footer>
+			<p class="text-center">Hand-coded by <a href="https://github.com/Azdrian" target="_blank">U'el Azdrian Small</a> &copy; 2016.</p>
+		</footer>
+		<!-- end of footer -->
+	</div>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="js/wiki.js"></script>
+</body>
+
+</html>
