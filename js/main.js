@@ -1,17 +1,19 @@
 $(function() {
-
+    
   $("#search-button").on("click", function() {
+    
     $(".search-results").empty();
-    var $searchWord = $("#search-box").val(),
+    
+     var $searchWord = $("#search-box").val(),
 
-      $url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + encodeURI($searchWord) +
-      "&limit=8&format=json&callback=?",
+         $url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + encodeURI($searchWord) +
+         "&limit=8&format=json&callback=?",
 
-      $searchTitle = '<h2 class="search-title"> Search results for: ' + ' " ' + $searchWord + ' " ' + '</h2>';
+         $searchTitle = '<h2 class="search-title"> Search results for: ' + ' " ' + $searchWord + ' " ' + '</h2>';
 
     $(".search-results").append($searchTitle);
 
-    //makes requesto to mediawiki API
+    //makes request to mediawiki API and display the results
     $.ajax({
       url: $url,
       type: 'GET',
